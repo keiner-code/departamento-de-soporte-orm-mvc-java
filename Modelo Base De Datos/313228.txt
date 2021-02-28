@@ -1,0 +1,76 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema Departamento_Soporte
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema Departamento_Soporte
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `Departamento_Soporte` DEFAULT CHARACTER SET utf8 ;
+USE `Departamento_Soporte` ;
+
+-- -----------------------------------------------------
+-- Table `Departamento_Soporte`.`Login`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Departamento_Soporte`.`Login` (
+  `idLogin` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(45) NULL,
+  `Contrasena` VARCHAR(45) NULL,
+  `Tipo Cuenta` VARCHAR(45) NULL,
+  `Apellido` VARCHAR(45) NULL,
+  PRIMARY KEY (`idLogin`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Departamento_Soporte`.`Empresa`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Departamento_Soporte`.`Empresa` (
+  `Codigo` VARCHAR(40) NOT NULL,
+  `Nombre De La Empresa` VARCHAR(45) NULL,
+  `Tipo De Empresa` VARCHAR(45) NULL,
+  `Area De La Queja` VARCHAR(45) NULL,
+  `Queja O Reclamo 1` VARCHAR(400) NULL,
+  `Estado Queja 1` VARCHAR(45) NULL,
+  `Queja O Reclamo 2` VARCHAR(400) NULL,
+  `Estado Queja 2` VARCHAR(45) NULL,
+  `Queja O Reclamo 3` VARCHAR(400) NULL,
+  `Estado Queja 3` VARCHAR(45) NULL,
+  PRIMARY KEY (`Codigo`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Departamento_Soporte`.`Solicitudes_Atendidas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Departamento_Soporte`.`Solicitudes_Atendidas` (
+  `idSolicitudes_Atendidas` INT NOT NULL,
+  `Nombre Empresa` VARCHAR(45) NULL,
+  `Codigo_Empresa` VARCHAR(45) NULL,
+  `Nombre Funcionario` VARCHAR(45) NULL,
+  `Contrasena Funcionario` VARCHAR(45) NULL,
+  PRIMARY KEY (`idSolicitudes_Atendidas`))
+ENGINE = InnoDB;
+
+USE `Departamento_Soporte` ;
+
+-- -----------------------------------------------------
+-- Placeholder table for view `Departamento_Soporte`.`view1`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Departamento_Soporte`.`view1` (`id` INT);
+
+-- -----------------------------------------------------
+-- View `Departamento_Soporte`.`view1`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `Departamento_Soporte`.`view1`;
+USE `Departamento_Soporte`;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

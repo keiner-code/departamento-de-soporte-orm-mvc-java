@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-may-2018 17:34:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Empresa" table="empresa" catalog="departamento_soporte" optimistic-lock="version">
+        <id name="codigo" type="string">
+            <column name="Codigo" length="40" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreDeLaEmpresa" type="string">
+            <column name="`Nombre De La Empresa`" length="45" />
+        </property>
+        <property name="tipoDeEmpresa" type="string">
+            <column name="`Tipo De Empresa`" length="45" />
+        </property>
+        <property name="areaDeLaQueja" type="string">
+            <column name="`Area De La Queja`" length="45" />
+        </property>
+        <property name="quejaOReclamo1" type="string">
+            <column name="`Queja O Reclamo 1`" length="400" />
+        </property>
+        <property name="estadoQueja1" type="string">
+            <column name="`Estado Queja 1`" length="45" />
+        </property>
+        <property name="quejaOReclamo2" type="string">
+            <column name="`Queja O Reclamo 2`" length="400" />
+        </property>
+        <property name="estadoQueja2" type="string">
+            <column name="`Estado Queja 2`" length="45" />
+        </property>
+        <property name="quejaOReclamo3" type="string">
+            <column name="`Queja O Reclamo 3`" length="400" />
+        </property>
+        <property name="estadoQueja3" type="string">
+            <column name="`Estado Queja 3`" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

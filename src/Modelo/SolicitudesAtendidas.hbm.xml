@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-may-2018 17:34:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.SolicitudesAtendidas" table="solicitudes_atendidas" catalog="departamento_soporte" optimistic-lock="version">
+        <id name="idSolicitudesAtendidas" type="int">
+            <column name="idSolicitudes_Atendidas" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreEmpresa" type="string">
+            <column name="`Nombre Empresa`" length="45" />
+        </property>
+        <property name="codigoEmpresa" type="string">
+            <column name="Codigo_Empresa" length="45" />
+        </property>
+        <property name="nombreFuncionario" type="string">
+            <column name="`Nombre Funcionario`" length="45" />
+        </property>
+        <property name="contrasenaFuncionario" type="string">
+            <column name="`Contrasena Funcionario`" length="45" />
+        </property>
+        <property name="estadosolicitud1" type="string">
+            <column name="`estado solicitud 1`" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

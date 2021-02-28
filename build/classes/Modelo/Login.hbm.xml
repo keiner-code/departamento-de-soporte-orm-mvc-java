@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-may-2018 17:34:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Login" table="login" catalog="departamento_soporte" optimistic-lock="version">
+        <id name="idLogin" type="java.lang.Integer">
+            <column name="idLogin" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="45" />
+        </property>
+        <property name="contrasena" type="string">
+            <column name="Contrasena" length="45" />
+        </property>
+        <property name="tipoCuenta" type="string">
+            <column name="`Tipo Cuenta`" length="45" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="Apellido" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
